@@ -267,7 +267,7 @@ function App() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            model: "meta-llama/llama-3.3-70b-instruct",
+            model: "google/gemma-3n-e4b-it:free",
             messages: [{ role: "user", content: query }],
           }),
         }
