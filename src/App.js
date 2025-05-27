@@ -256,18 +256,18 @@ function App() {
       });
     }
     setQuery("");
-    const apiKey = process.env.API_KEY;
+
     try {
       const response = await fetch(
         "https://openrouter.ai/api/v1/chat/completions",
         {
           method: "POST",
           headers: {
-            Authorization: "Bearer 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",
+            Authorization: "Bearer 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",
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            model: "google/gemma-3n-e4b-it:free",
+            model: "mistralai/devstral-small:free",
             messages: [{ role: "user", content: query }],
           }),
         }
