@@ -264,11 +264,11 @@ function App() {
         {
           method: "POST",
           headers: {
-            Authorization: "Bearer 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", // Replace with your actual API key
+            Authorization: "Bearer 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", // Replace with your actual API key
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            model: "meta-llama/llama-3.3-8b-instruct:free",
+            model: "meta-llama/llama-3.3-70b-instruct:free",
             messages: [{ role: "user", content: query }],
           }),
         }
