@@ -256,15 +256,14 @@ function App() {
       });
     }
     setQuery("");
-
+    const apiKey = process.env.API_KEY;
     try {
       const response = await fetch(
         "https://openrouter.ai/api/v1/chat/completions",
         {
           method: "POST",
           headers: {
-            Authorization:
-              "Bearer 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", // Replace with your actual API key
+            Authorization: `Bearer ${apiKey}`,
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
