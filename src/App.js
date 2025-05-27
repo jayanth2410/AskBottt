@@ -10,20 +10,19 @@ import {
   FaEdit,
   FaCheck,
   FaTimes,
-  FaLightbulb,
+ 
   FaBookOpen,
   FaBolt,
   FaCode,
   FaCompass,
   FaRocket,
-  FaGraduationCap,
+
 } from "react-icons/fa";
 import { IoMdSend } from "react-icons/io";
 import "highlight.js/styles/github-dark.css";
 import "react-toastify/dist/ReactToastify.css";
 
-// At the top of your file, outside the component:
-let codeBlockCounter = 0;
+
 
 // Add this hash function at the top (outside the component)
 function hashCode(str) {
@@ -47,7 +46,6 @@ function App() {
   const [editQuery, setEditQuery] = useState("");
   const responseBoxRef = useRef(null);
   const [dynamicWord, setDynamicWord] = useState("Discover");
-  const [dynamicLabel, setDynamicLabel] = useState("Ask me Anything...");
   const [showTour, setShowTour] = useState(false);
   const [tourPosition, setTourPosition] = useState({
     left: "50%",
@@ -57,12 +55,7 @@ function App() {
   // Rotate dynamic word every 2 seconds
   useEffect(() => {
     const words = ["Discover", "Explore", "Search", "Create"];
-    const labelWords = [
-      "Ask me anything...",
-      "Explore here now...",
-      "Unveil the unknown...",
-      "Discover new insights...",
-    ];
+
     let index = 0;
     const interval = setInterval(() => {
       index = (index + 1) % words.length;
@@ -264,11 +257,11 @@ function App() {
         {
           method: "POST",
           headers: {
-            Authorization: "Bearer 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", // Replace with your actual API key
+            Authorization: "Bearer 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", // Replace with your actual API key
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            model: "meta-llama/llama-3.3-8b-instruct:free",
+            model: "meta-llama/llama-3.3-70b-instruct:free",
             messages: [{ role: "user", content: query }],
           }),
         }
