@@ -263,11 +263,11 @@ function App() {
         {
           method: "POST",
           headers: {
-            Authorization: "Bearer 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",
+            Authorization: "Bearer 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",
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            model: "mistralai/devstral-small:free",
+            model: "meta-llama/llama-3.3-8b-instruct:free",
             messages: [{ role: "user", content: query }],
           }),
         }
