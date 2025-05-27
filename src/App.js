@@ -263,7 +263,7 @@ function App() {
         {
           method: "POST",
           headers: {
-            Authorization: `Bearer ${apiKey}`,
+            Authorization: "Bearer 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",
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
